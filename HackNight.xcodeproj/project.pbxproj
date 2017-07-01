@@ -12,6 +12,8 @@
 		576BE2811F07DD7800006EA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 576BE27F1F07DD7800006EA8 /* Main.storyboard */; };
 		576BE2831F07DD7800006EA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 576BE2821F07DD7800006EA8 /* Assets.xcassets */; };
 		576BE2861F07DD7800006EA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 576BE2841F07DD7800006EA8 /* LaunchScreen.storyboard */; };
+		6ACEAD7A1F07F93E00CDF26B /* Vestito.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACEAD791F07F93E00CDF26B /* Vestito.swift */; };
+		6ACEAD7C1F080D8D00CDF26B /* String+HTML2Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACEAD7B1F080D8D00CDF26B /* String+HTML2Text.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		576BE2821F07DD7800006EA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		576BE2851F07DD7800006EA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		576BE2871F07DD7800006EA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6ACEAD791F07F93E00CDF26B /* Vestito.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vestito.swift; sourceTree = "<group>"; };
+		6ACEAD7B1F080D8D00CDF26B /* String+HTML2Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+HTML2Text.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 		576BE27A1F07DD7700006EA8 /* HackNight */ = {
 			isa = PBXGroup;
 			children = (
+				6ACEAD781F07F8FA00CDF26B /* Datamodel */,
 				576BE27B1F07DD7700006EA8 /* AppDelegate.swift */,
 				576BE27D1F07DD7700006EA8 /* ViewController.swift */,
 				576BE27F1F07DD7800006EA8 /* Main.storyboard */,
@@ -62,6 +67,15 @@
 				576BE2871F07DD7800006EA8 /* Info.plist */,
 			);
 			path = HackNight;
+			sourceTree = "<group>";
+		};
+		6ACEAD781F07F8FA00CDF26B /* Datamodel */ = {
+			isa = PBXGroup;
+			children = (
+				6ACEAD791F07F93E00CDF26B /* Vestito.swift */,
+				6ACEAD7B1F080D8D00CDF26B /* String+HTML2Text.swift */,
+			);
+			name = Datamodel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,7 +110,7 @@
 				TargetAttributes = {
 					576BE2771F07DD7700006EA8 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 2W783BDND5;
+						DevelopmentTeam = PL3PPA7N8L;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -137,8 +151,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ACEAD7A1F07F93E00CDF26B /* Vestito.swift in Sources */,
 				576BE27E1F07DD7700006EA8 /* ViewController.swift in Sources */,
 				576BE27C1F07DD7700006EA8 /* AppDelegate.swift in Sources */,
+				6ACEAD7C1F080D8D00CDF26B /* String+HTML2Text.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +279,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2W783BDND5;
+				DEVELOPMENT_TEAM = PL3PPA7N8L;
 				INFOPLIST_FILE = HackNight/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -277,7 +293,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2W783BDND5;
+				DEVELOPMENT_TEAM = PL3PPA7N8L;
 				INFOPLIST_FILE = HackNight/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -306,6 +322,7 @@
 				576BE28C1F07DD7800006EA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
