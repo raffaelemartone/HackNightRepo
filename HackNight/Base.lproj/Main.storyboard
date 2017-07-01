@@ -227,7 +227,6 @@
         <!--Social-->
         <scene sceneID="63k-7S-g2d">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kd1-ER-fDq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="nvB-Tg-Q0h" customClass="DettaglioCapoController" customModule="HackNight" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eSz-tn-Bu4"/>
@@ -261,13 +260,13 @@
                         <segue destination="Qbs-cK-Ahe" kind="show" identifier="abbinamentiDelCapo" id="I0M-2Q-5zR"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kd1-ER-fDq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2638" y="1062"/>
         </scene>
         <!--Social-->
         <scene sceneID="P8p-ZD-XWH">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zU9-3i-bgu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Qbs-cK-Ahe" customClass="AbbinamentoCapoController" customModule="HackNight" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GyX-mM-to0"/>
@@ -290,6 +289,7 @@
                     <tabBarItem key="tabBarItem" title="Social" id="e2m-Ir-Sg0"/>
                     <navigationItem key="navigationItem" id="FlX-Fh-hDj"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zU9-3i-bgu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3534" y="1063"/>
         </scene>
@@ -349,7 +349,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="th2-Y7-c1Q">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="th2-Y7-c1Q">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -373,6 +373,10 @@
         <scene sceneID="89I-gw-Gwd">
             <objects>
                 <viewController id="ZBV-Rt-41P" customClass="ListaOutfitController" customModule="HackNight" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IAW-5Q-59t"/>
+                        <viewControllerLayoutGuide type="bottom" id="buW-6Y-3E8"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="NCn-3c-Wmu">
                         <rect key="frame" x="0.0" y="0.0" width="343" height="483"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -416,6 +420,13 @@
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f0w-oq-HtD">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    </imageView>
+                                                                </subviews>
                                                             </view>
                                                         </collectionViewCell>
                                                     </cells>
@@ -448,6 +459,10 @@
         <scene sceneID="lHI-fJ-nNm">
             <objects>
                 <viewController id="21X-NP-in3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bvN-eQ-oXd"/>
+                        <viewControllerLayoutGuide type="bottom" id="yje-4w-xXO"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="e6R-si-3F6">
                         <rect key="frame" x="0.0" y="0.0" width="305" height="483"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
