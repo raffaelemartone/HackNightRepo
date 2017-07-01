@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListaOutfitController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ListaOutfitController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +35,18 @@ class ListaOutfitController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewOutfitCell", for: indexPath)
+        return collectionViewCell
+    }
 
     /*
     // MARK: - Navigation
