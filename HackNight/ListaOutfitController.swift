@@ -1,5 +1,5 @@
 //
-//  SocialViewController.swift
+//  ListaOutfitController.swift
 //  HackNight
 //
 //  Created by Raffaele Martone on 01/07/17.
@@ -8,12 +8,11 @@
 
 import UIKit
 
-class SocialViewController: UIViewController {
+class ListaOutfitController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.VersusModeView.isHidden = true
-        self.ListaOutfitView.isHidden = false
+
         // Do any additional setup after loading the view.
     }
 
@@ -22,28 +21,21 @@ class SocialViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-//    @IBAction func mostraDettagli(_ sender: Any) {
-//        performSegue(withIdentifier: "dettaglioCapo", sender: self)
-//    }
-
-    @IBOutlet weak var ListaOutfitView: UIView!
-
-    @IBOutlet weak var VersusModeView: UIView!
-    
-    @IBAction func toggle(sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 0 {
-            self.VersusModeView.isHidden = true
-            self.ListaOutfitView.isHidden = false
-        } else {
-            self.ListaOutfitView.isHidden = true
-            self.VersusModeView.isHidden = false
-        }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellaListaOutfit", for: indexPath)
+            //as! OutfitTableViewCell
+        return cell
+    }
     
-    
-    
+
     /*
     // MARK: - Navigation
 
