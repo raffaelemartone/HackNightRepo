@@ -29,8 +29,7 @@ class ListaOutfitController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellaListaOutfit", for: indexPath)
-            //as! OutfitTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellaListaOutfit", for: indexPath) as! OutfitTableViewCell
         return cell
     }
     
@@ -46,6 +45,23 @@ class ListaOutfitController: UIViewController, UITableViewDelegate, UITableViewD
         let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewOutfitCell", for: indexPath)
         return collectionViewCell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let cell = collectionView.cellForItem(at: indexPath) as? CellaListaOutfitCollectionViewCell
+        cell?.idCapo = "SettaID"
+        self.performSegue(withIdentifier: "mostraDettagliCapo", sender: cell)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "mostraDettagliCapo" {
+            let cell = sender as? CellaListaOutfitCollectionViewCell
+            let myDestinationController = segue.destination as? DettaglioCapoController
+            myDestinationController?.idCellaSelezionata = (cell?.idCapo)!
+        }
+    }
+    
 
     /*
     // MARK: - Navigation

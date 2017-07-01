@@ -20,15 +20,12 @@ class VersusModeController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
         
         for _ in (0..<10) {
-            randomSeconds.append(Float(arc4random_uniform(60) + 0))
-            randomHourLeft.append(Int(arc4random_uniform(24) + 0))
-            randomMinutesLeft.append(Int(arc4random_uniform(60) + 0))
-
+            randomSeconds.append(Float(arc4random_uniform(31) + 30))
+            randomHourLeft.append(Int(arc4random_uniform(22) + 0))
+            randomMinutesLeft.append(Int(arc4random_uniform(50) + 0))
         }
         
         timer = Timer.scheduledTimer(timeInterval: 1.2, target: self, selector: #selector(update), userInfo: nil, repeats: true)
-
-        // Do any additional setup after loading the view.
     }
     
     

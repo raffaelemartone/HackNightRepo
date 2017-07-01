@@ -60,14 +60,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profilo" id="qW4-KH-i4H"/>
-                    <navigationItem key="navigationItem" id="Uyi-xH-3eP">
-                        <nil key="title"/>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HC9-hR-5VT">
-                            <rect key="frame" x="172.5" y="7" width="30" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="+"/>
-                        </button>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="Uyi-xH-3eP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJi-ip-qX0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -233,11 +226,11 @@
                         <viewControllerLayoutGuide type="bottom" id="iWf-k9-fxa"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="E0a-TL-VLV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="488"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dettaglio Capo Selezionato" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4e9-42-wSf">
-                                <rect key="frame" x="34" y="134" width="274" height="217"/>
+                                <rect key="frame" x="65" y="-15" width="274" height="217"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -251,18 +244,26 @@
                                     <action selector="mostraAbbinamentiCapo:" destination="nvB-Tg-Q0h" eventType="touchUpInside" id="BKD-Qu-dym"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ID CAPO SELEZIONATO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHF-XW-I65">
+                                <rect key="frame" x="96" y="264" width="182" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Social" id="LnT-22-Yun"/>
                     <navigationItem key="navigationItem" id="d2T-oX-vcc"/>
                     <connections>
+                        <outlet property="idLabel" destination="dHF-XW-I65" id="3Pf-oB-MQG"/>
                         <segue destination="Qbs-cK-Ahe" kind="show" identifier="abbinamentiDelCapo" id="I0M-2Q-5zR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kd1-ER-fDq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2338" y="989"/>
+            <point key="canvasLocation" x="2364" y="905.84707646176923"/>
         </scene>
         <!--Social-->
         <scene sceneID="P8p-ZD-XWH">
@@ -273,7 +274,7 @@
                         <viewControllerLayoutGuide type="bottom" id="jry-us-gBm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="wh2-Yg-bva">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="488"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Abbinamenti con l'outfit selezionato" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8L-zk-dEv">
@@ -367,7 +368,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d9P-pB-NOs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1437.5999999999999" y="-215.44227886056973"/>
+            <point key="canvasLocation" x="1650" y="-215"/>
         </scene>
         <!--Lista Outfit Controller-->
         <scene sceneID="89I-gw-Gwd">
@@ -381,30 +382,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="488"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6A-yy-g2Q">
-                                <rect key="frame" x="48" y="433" width="246" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Vai al dettaglio del capo selezionato"/>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="318" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DVu-re-u4g">
-                                <rect key="frame" x="0.0" y="0.0" width="343" height="425"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="488"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellaListaOutfit" rowHeight="318" id="FeY-AJ-sNY">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="318"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellaListaOutfit" rowHeight="318" id="FeY-AJ-sNY" customClass="OutfitTableViewCell" customModule="HackNight" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="318"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FeY-AJ-sNY" id="JcT-49-9EP">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="317.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="317.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="izl-h6-GHC">
-                                                    <rect key="frame" x="8" y="37" width="327" height="206"/>
+                                                    <rect key="frame" x="8" y="37" width="359" height="206"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </imageView>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pv3-SW-kbk">
-                                                    <rect key="frame" x="8" y="251" width="327" height="59"/>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pv3-SW-kbk" customClass="C">
+                                                    <rect key="frame" x="8" y="251" width="359" height="59"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zbz-Dk-dqT">
@@ -414,7 +410,7 @@
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewOutfitCell" id="VFT-BU-WHz">
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewOutfitCell" id="VFT-BU-WHz" customClass="CellaListaOutfitCollectionViewCell" customModule="HackNight" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="4.5" width="50" height="50"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -454,10 +450,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="nvB-Tg-Q0h" kind="show" identifier="mostraDettagliCapo" id="qM8-UE-XBW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tUN-mt-snS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1416.8" y="906.29685157421295"/>
+            <point key="canvasLocation" x="1416.8" y="905.84707646176923"/>
         </scene>
         <!--Versus Mode Controller-->
         <scene sceneID="lHI-fJ-nNm">
