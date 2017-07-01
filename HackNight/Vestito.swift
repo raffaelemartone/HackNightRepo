@@ -20,6 +20,7 @@ class Vestito {
     init(id: String, tipo: String) {
         self.id = id
         self.tipo = tipo
+        let semaphore = DispatchSemaphore.init(value: 0)
         let urlPath = "http://api.asos.com/product/catalogue/v2/products/" + id + "?store=IT"
         guard let endpoint = URL(string: urlPath) else {
             print("Error creating endpoint")
@@ -28,9 +29,11 @@ class Vestito {
         URLSession.shared.dataTask(with: endpoint) { (data, response, error) in
             do {
                 guard let data = data else {
+                    semaphore.signal()
                     throw JSONError.NoData
                 }
                 guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary else {
+                    semaphore.signal()
                     throw JSONError.ConversionFailed
                 }
                 self.descrizione = (json["description"]  as? String)!
@@ -46,21 +49,23 @@ class Vestito {
                         self.colore = (variant["colour"]  as? String)!
                         let price = variant["price"] as? [String: Any]
                         let current = price?["current"] as? [String: Any]
-                        self.prezzo = (current?["text"] as? Double)!
+                        self.prezzo = (current?["value"] as? Double)!
                         self.inStock = (variant["isInStock"] as? Bool)!
                     }
                 }
                 for immagine in immagini! {
-                    if immagine["isPrimary"]  as? Int == 1 {
+                    if (immagine["isPrimary"]  as? Bool)! {
                         self.immagine = (immagine["url"] as? String)!
                     }
                 }
+                semaphore.signal()
                 
             } catch let error as JSONError {
                 print(error.rawValue)
             } catch let error as NSError {
                 print(error.debugDescription)
             }
-            }.resume()
+        }.resume()
+        semaphore.wait()
     }
 }
