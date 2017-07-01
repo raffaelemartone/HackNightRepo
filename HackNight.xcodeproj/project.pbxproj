@@ -12,6 +12,9 @@
 		576BE2811F07DD7800006EA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 576BE27F1F07DD7800006EA8 /* Main.storyboard */; };
 		576BE2831F07DD7800006EA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 576BE2821F07DD7800006EA8 /* Assets.xcassets */; };
 		576BE2861F07DD7800006EA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 576BE2841F07DD7800006EA8 /* LaunchScreen.storyboard */; };
+		57BF535D1F07E8B100361ECE /* DettaglioCapoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BF535C1F07E8B100361ECE /* DettaglioCapoController.swift */; };
+		57BF535F1F07E8CB00361ECE /* AbbinamentiCapoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BF535E1F07E8CB00361ECE /* AbbinamentiCapoController.swift */; };
+		57BF53611F07E8F000361ECE /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BF53601F07E8F000361ECE /* SocialViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		576BE2821F07DD7800006EA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		576BE2851F07DD7800006EA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		576BE2871F07DD7800006EA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57BF535C1F07E8B100361ECE /* DettaglioCapoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DettaglioCapoController.swift; sourceTree = "<group>"; };
+		57BF535E1F07E8CB00361ECE /* AbbinamentiCapoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbbinamentiCapoController.swift; sourceTree = "<group>"; };
+		57BF53601F07E8F000361ECE /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,9 @@
 			children = (
 				576BE27B1F07DD7700006EA8 /* AppDelegate.swift */,
 				576BE27D1F07DD7700006EA8 /* ViewController.swift */,
+				57BF535C1F07E8B100361ECE /* DettaglioCapoController.swift */,
+				57BF535E1F07E8CB00361ECE /* AbbinamentiCapoController.swift */,
+				57BF53601F07E8F000361ECE /* SocialViewController.swift */,
 				576BE27F1F07DD7800006EA8 /* Main.storyboard */,
 				576BE2821F07DD7800006EA8 /* Assets.xcassets */,
 				576BE2841F07DD7800006EA8 /* LaunchScreen.storyboard */,
@@ -137,8 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57BF53611F07E8F000361ECE /* SocialViewController.swift in Sources */,
 				576BE27E1F07DD7700006EA8 /* ViewController.swift in Sources */,
+				57BF535F1F07E8CB00361ECE /* AbbinamentiCapoController.swift in Sources */,
 				576BE27C1F07DD7700006EA8 /* AppDelegate.swift in Sources */,
+				57BF535D1F07E8B100361ECE /* DettaglioCapoController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +318,7 @@
 				576BE28C1F07DD7800006EA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

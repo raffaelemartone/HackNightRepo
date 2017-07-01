@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Guardaroba-->
         <scene sceneID="uGh-CN-c6t">
             <objects>
                 <viewController id="BCg-Vc-4aN" sceneMemberID="viewController">
@@ -20,18 +20,9 @@
                     <view key="view" contentMode="scaleToFill" id="f5r-6y-HCQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0K-vc-kWD">
-                                <rect key="frame" x="196" y="196" width="10" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="9Vg-ba-2W6"/>
+                    <tabBarItem key="tabBarItem" title="Guardaroba" id="9Vg-ba-2W6"/>
                     <navigationItem key="navigationItem" id="iZ4-nA-FDZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ji3-yn-dvR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -55,7 +46,7 @@
             </objects>
             <point key="canvasLocation" x="-228" y="557"/>
         </scene>
-        <!--Item 1-->
+        <!--Profilo-->
         <scene sceneID="r1H-Db-Mz7">
             <objects>
                 <viewController id="pgt-vz-Glu" sceneMemberID="viewController">
@@ -77,7 +68,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="qW4-KH-i4H"/>
+                    <tabBarItem key="tabBarItem" title="Profilo" id="qW4-KH-i4H"/>
                     <navigationItem key="navigationItem" id="Uyi-xH-3eP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJi-ip-qX0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -87,7 +78,6 @@
         <!--Tab Bar Controller-->
         <scene sceneID="KQ1-Ie-w35">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XM8-8r-vFX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController id="Ii9-nZ-xd9" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="VDn-Vs-oOq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
@@ -101,13 +91,14 @@
                         <segue destination="nas-Pc-h9H" kind="relationship" relationship="viewControllers" id="g75-Q0-VSS"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XM8-8r-vFX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2186" y="1003"/>
+            <point key="canvasLocation" x="-2129" y="861"/>
         </scene>
-        <!--Item 2-->
+        <!--Social-->
         <scene sceneID="cg8-fF-Hh2">
             <objects>
-                <viewController id="m7q-KD-M0e" sceneMemberID="viewController">
+                <viewController id="m7q-KD-M0e" customClass="SocialViewController" customModule="HackNight" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="agI-6P-7MV"/>
                         <viewControllerLayoutGuide type="bottom" id="R6U-cN-RJT"/>
@@ -116,24 +107,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHu-tx-Hi3">
-                                <rect key="frame" x="197" y="289" width="11" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lista degli outfit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHu-tx-Hi3">
+                                <rect key="frame" x="86" y="286" width="202" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9z3-CF-gX0">
+                                <rect key="frame" x="94" y="512" width="186" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Dettaglio Capo Selezionato"/>
+                                <connections>
+                                    <action selector="mostraDettagli:" destination="m7q-KD-M0e" eventType="touchUpInside" id="2y3-lS-zcS"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="014-Vm-pjc">
+                                <rect key="frame" x="16" y="103" width="343" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Yp0-t0-Sb6"/>
+                    <tabBarItem key="tabBarItem" title="Social" id="Yp0-t0-Sb6"/>
                     <navigationItem key="navigationItem" id="WLf-Hx-ffN"/>
+                    <connections>
+                        <segue destination="nvB-Tg-Q0h" kind="show" identifier="dettaglioCapo" id="oAX-o5-Uri"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="poY-jB-DeE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="640.79999999999995" y="1256.2218890554723"/>
         </scene>
-        <!--Item 2-->
+        <!--Calendario-->
         <scene sceneID="7K4-iT-xYW">
             <objects>
                 <viewController id="xey-GV-Ltj" sceneMemberID="viewController">
@@ -155,7 +165,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="c1e-96-sb8"/>
+                    <tabBarItem key="tabBarItem" title="Calendario" id="c1e-96-sb8"/>
                     <navigationItem key="navigationItem" id="U3S-zF-ibu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DUf-uF-65u" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -179,12 +189,11 @@
             </objects>
             <point key="canvasLocation" x="-228" y="1256"/>
         </scene>
-        <!--Item-->
+        <!--Profilo-->
         <scene sceneID="Ivw-18-a3d">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tdf-oy-EHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="dH7-f3-7CM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="m06-B3-Cae"/>
+                    <tabBarItem key="tabBarItem" title="Profilo" id="m06-B3-Cae"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zaV-Dh-7VA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -193,6 +202,7 @@
                         <segue destination="pgt-vz-Glu" kind="relationship" relationship="rootViewController" id="YVq-66-UFb"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tdf-oy-EHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-228" y="-215"/>
         </scene>
@@ -212,6 +222,104 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gUh-zS-uOg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-228" y="2051"/>
+        </scene>
+        <!--Social-->
+        <scene sceneID="63k-7S-g2d">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kd1-ER-fDq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="nvB-Tg-Q0h" customClass="DettaglioCapoController" customModule="HackNight" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eSz-tn-Bu4"/>
+                        <viewControllerLayoutGuide type="bottom" id="iWf-k9-fxa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E0a-TL-VLV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dettaglio Capo Selezionato" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4e9-42-wSf">
+                                <rect key="frame" x="34" y="134" width="274" height="217"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMl-nl-A5J">
+                                <rect key="frame" x="65" y="558" width="245" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Abbinamenti con l'outfit selezionato"/>
+                                <connections>
+                                    <action selector="mostraAbbinamentiCapo:" destination="nvB-Tg-Q0h" eventType="touchUpInside" id="BKD-Qu-dym"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Social" id="LnT-22-Yun"/>
+                    <navigationItem key="navigationItem" id="d2T-oX-vcc"/>
+                    <connections>
+                        <segue destination="Qbs-cK-Ahe" kind="show" identifier="abbinamentiDelCapo" id="I0M-2Q-5zR"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1696.8" y="1039.4302848575712"/>
+        </scene>
+        <!--Social-->
+        <scene sceneID="P8p-ZD-XWH">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zU9-3i-bgu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Qbs-cK-Ahe" customClass="AbbinamentoCapoController" customModule="HackNight" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GyX-mM-to0"/>
+                        <viewControllerLayoutGuide type="bottom" id="jry-us-gBm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wh2-Yg-bva">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Abbinamenti con l'outfit selezionato" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8L-zk-dEv">
+                                <rect key="frame" x="34" y="134" width="274" height="217"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Social" id="e2m-Ir-Sg0"/>
+                    <navigationItem key="navigationItem" id="FlX-Fh-hDj"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2593" y="1041"/>
+        </scene>
+        <!--Mio Armadio-->
+        <scene sceneID="jA5-Io-dTT">
+            <objects>
+                <viewController id="7jh-bc-UKk" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vfl-B2-jxt"/>
+                        <viewControllerLayoutGuide type="bottom" id="Edk-zh-Vuw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nFN-vF-Acv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="db2-BO-s0N">
+                                <rect key="frame" x="196" y="196" width="10" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Mio Armadio" id="6tC-kF-ybt"/>
+                    <navigationItem key="navigationItem" id="oaO-0b-l0h"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IN0-I8-188" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1697" y="1942"/>
         </scene>
     </scenes>
 </document>
