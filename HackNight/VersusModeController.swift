@@ -10,14 +10,37 @@ import UIKit
 
 class VersusModeController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var timer = Timer()
+
+    var randomSeconds = [Float]()
+    var randomHourLeft = [Int]()
+    var randomMinutesLeft = [Int]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for _ in (0..<10) {
+            randomSeconds.append(Float(arc4random_uniform(60) + 0))
+            randomHourLeft.append(Int(arc4random_uniform(24) + 0))
+            randomMinutesLeft.append(Int(arc4random_uniform(60) + 0))
+
+        }
+        
+        timer = Timer.scheduledTimer(timeInterval: 1.2, target: self, selector: #selector(update), userInfo: nil, repeats: true)
 
         // Do any additional setup after loading the view.
     }
     
-    var timer = Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: #selector(UIMenuController.update), userInfo: nil, repeats: true)
-
+    
+    @IBOutlet weak var tableViewVersus: UITableView!
+    func update() {
+        for i in (0..<10) {
+            randomSeconds[i] -= 1
+        }
+        self.tableViewVersus.reloadData()
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -33,10 +56,8 @@ class VersusModeController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "versusModeCell", for: indexPath) as! VersusModeCell
-        let randomHourLeft = Int(arc4random_uniform(24) + 0)
-        let randomMinutesLeft = Float(arc4random_uniform(60) + 0)
-        let randomSecondsLeft = Float(arc4random_uniform(60) + 0)
-        cell.timeLeft.text = "Time Left: ORE \(randomHourLeft), MIN \(randomMinutesLeft), SEC \(randomSecondsLeft)"
+        cell.timeLeft.text = "Time Left: ORE \(self.randomHourLeft[indexPath.section]), MIN \(self.randomMinutesLeft[indexPath.section]), SEC \(self.randomSeconds[indexPath.section])"
+        
         return cell
     }
     
