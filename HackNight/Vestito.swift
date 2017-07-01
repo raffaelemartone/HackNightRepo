@@ -37,9 +37,11 @@ class Vestito {
                 self.descrizione = self.descrizione.html2String
                 self.sesso = (json["gender"]  as? String)!
                 let variants = json["variants"] as? [[String: Any]]
-                let immagini = json["images"] as? [[String: Any]]
+                let media = json["media"] as? [String: Any]
+                let immagini = media?["images"] as? [[String: Any]]
+                
                 for variant in variants! {
-                    if variant["id"]  as? String == id {
+                    if !self.inStock {
                         self.nome = (variant["name"]  as? String)!
                         self.colore = (variant["colour"]  as? String)!
                         let price = variant["price"] as? [String: Any]
