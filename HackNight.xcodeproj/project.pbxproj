@@ -17,6 +17,8 @@
 		57BF53611F07E8F000361ECE /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BF53601F07E8F000361ECE /* SocialViewController.swift */; };
 		57BF53631F080F8800361ECE /* OutfitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BF53621F080F8800361ECE /* OutfitTableViewCell.swift */; };
 		57BF53651F0811CB00361ECE /* ListaOutfitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BF53641F0811CB00361ECE /* ListaOutfitController.swift */; };
+		57BF53691F081A7B00361ECE /* String+HTML2Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BF53671F081A7B00361ECE /* String+HTML2Text.swift */; };
+		57BF536A1F081A7B00361ECE /* Vestito.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BF53681F081A7B00361ECE /* Vestito.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		57BF53601F07E8F000361ECE /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		57BF53621F080F8800361ECE /* OutfitTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutfitTableViewCell.swift; sourceTree = "<group>"; };
 		57BF53641F0811CB00361ECE /* ListaOutfitController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaOutfitController.swift; sourceTree = "<group>"; };
+		57BF53671F081A7B00361ECE /* String+HTML2Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+HTML2Text.swift"; sourceTree = "<group>"; };
+		57BF53681F081A7B00361ECE /* Vestito.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vestito.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 		576BE27A1F07DD7700006EA8 /* HackNight */ = {
 			isa = PBXGroup;
 			children = (
+				57BF53661F081A5C00361ECE /* DataModel */,
 				576BE27B1F07DD7700006EA8 /* AppDelegate.swift */,
 				576BE27D1F07DD7700006EA8 /* ViewController.swift */,
 				57BF535C1F07E8B100361ECE /* DettaglioCapoController.swift */,
@@ -77,6 +82,15 @@
 				576BE2871F07DD7800006EA8 /* Info.plist */,
 			);
 			path = HackNight;
+			sourceTree = "<group>";
+		};
+		57BF53661F081A5C00361ECE /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				57BF53671F081A7B00361ECE /* String+HTML2Text.swift */,
+				57BF53681F081A7B00361ECE /* Vestito.swift */,
+			);
+			name = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57BF536A1F081A7B00361ECE /* Vestito.swift in Sources */,
 				57BF53631F080F8800361ECE /* OutfitTableViewCell.swift in Sources */,
 				57BF53611F07E8F000361ECE /* SocialViewController.swift in Sources */,
 				576BE27E1F07DD7700006EA8 /* ViewController.swift in Sources */,
@@ -159,6 +174,7 @@
 				576BE27C1F07DD7700006EA8 /* AppDelegate.swift in Sources */,
 				57BF535D1F07E8B100361ECE /* DettaglioCapoController.swift in Sources */,
 				57BF53651F0811CB00361ECE /* ListaOutfitController.swift in Sources */,
+				57BF53691F081A7B00361ECE /* String+HTML2Text.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
