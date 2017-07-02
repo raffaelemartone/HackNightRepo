@@ -8,9 +8,11 @@
 
 import UIKit
 
+var DB = DataBase()
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
 
 

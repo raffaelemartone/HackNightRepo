@@ -9,9 +9,18 @@
 import UIKit
 
 class ListaOutfitController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    @IBOutlet weak var voti: UILabel!
+    var arrayOfIMieiOutfit = [#imageLiteral(resourceName: "CapoNum1"),#imageLiteral(resourceName: "CapoNum2"),#imageLiteral(resourceName: "IMieiOutfit4")]
+                              
+    var arrayCapi = [#imageLiteral(resourceName: "gonna capo1"), #imageLiteral(resourceName: "magliaCapo1"), #imageLiteral(resourceName: "giacchetta capo1"),#imageLiteral(resourceName: "maglia capo2"),#imageLiteral(resourceName: "pantalone capo2"),#imageLiteral(resourceName: "Orologio capo2"),#imageLiteral(resourceName: "Capo1"),#imageLiteral(resourceName: "Capo2"),#imageLiteral(resourceName: "Capo3")]
+    
+    var arrayProfili = [#imageLiteral(resourceName: "fotoprofilo1"), #imageLiteral(resourceName: "fotoprofilo1"),#imageLiteral(resourceName: "fotoprofilo1"),#imageLiteral(resourceName: "fotoprofilo1"),#imageLiteral(resourceName: "fotoprofilo1"),#imageLiteral(resourceName: "fotoprofilo1"),#imageLiteral(resourceName: "fotoprofilo1"),#imageLiteral(resourceName: "fotoprofilo1")]
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
 
@@ -25,11 +34,13 @@ class ListaOutfitController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return arrayOfIMieiOutfit.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellaListaOutfit", for: indexPath) as! OutfitTableViewCell
+        cell.profilo.image = arrayProfili[indexPath.section]
+        cell.immagineOutfit.image = arrayOfIMieiOutfit[indexPath.section]
         return cell
     }
     
@@ -38,39 +49,30 @@ class ListaOutfitController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 15
+        return arrayCapi.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewOutfitCell", for: indexPath)
-        return collectionViewCell
+        let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewOutfitCell", for: indexPath) as? CellaListaOutfitCollectionViewCell
+        collectionViewCell?.idCapo = 0
+        collectionViewCell?.capoImmagine.image = arrayCapi[indexPath.row]
+        return collectionViewCell!
     }
     
+    var selectedCellId = 0
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let cell = collectionView.cellForItem(at: indexPath) as? CellaListaOutfitCollectionViewCell
-        cell?.idCapo = "SettaID"
+        selectedCellId = (cell?.idCapo)!
         self.performSegue(withIdentifier: "mostraDettagliCapo", sender: cell)
         
     }
-    
+        
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "mostraDettagliCapo" {
-            let cell = sender as? CellaListaOutfitCollectionViewCell
             let myDestinationController = segue.destination as? DettaglioCapoController
-            myDestinationController?.idCellaSelezionata = (cell?.idCapo)!
+            myDestinationController?.idCellaSelezionata = selectedCellId
         }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -10,6 +10,8 @@ import UIKit
 
 class CellaListaOutfitCollectionViewCell: UICollectionViewCell {
     
-    var idCapo = ""
+    var idCapo = 0
+    
+    @IBOutlet weak var capoImmagine: UIImageView!
     
 }

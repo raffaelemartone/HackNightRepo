@@ -10,13 +10,28 @@ import UIKit
 
 class DettaglioCapoController: UIViewController {
     
-    var idCellaSelezionata = ""
-
-    @IBOutlet weak var idLabel: UILabel!
+    var elencoVestiti = DB.getElencoVestiti()
+    var idCellaSelezionata = 0
+    
+    
+    @IBOutlet weak var nomeCapoSelezionato: UILabel!
+    @IBOutlet weak var descrizioneCapoSelezionato: UILabel!
+    
+    @IBOutlet weak var coloreCapoSelezionato: UILabel!
+    
+    @IBOutlet weak var fotoCapoSelezionato: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        idLabel.text = idCellaSelezionata
+        let capoSelezionato = DB.getById(id: self.idCellaSelezionata)
+        self.nomeCapoSelezionato.text = capoSelezionato.nome
+        self.descrizioneCapoSelezionato.text = capoSelezionato.descrizione
+        self.coloreCapoSelezionato.text = capoSelezionato.colore
+        self.fotoCapoSelezionato.image = capoSelezionato.foto
+        
+        self.descrizioneCapoSelezionato.isAccessibilityElement = true
+        self.descrizioneCapoSelezionato.accessibilityLabel = self.descrizioneCapoSelezionato.text
+        
         // Do any additional setup after loading the view.
     }
 
@@ -25,19 +40,11 @@ class DettaglioCapoController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func mostraAbbinamentiCapo(_ sender: Any) {
-        performSegue(withIdentifier: "abbinamentiDelCapo", sender: nil)
-
+    @IBAction func vediAbbinamenti(_ sender: Any) {
+        performSegue(withIdentifier: "abbinamentiDelCapo", sender: self)
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.tintColor = UIColor.darkGray;
     }
-    */
-
 }

@@ -10,6 +10,9 @@ import UIKit
 
 class OutfitTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var immagineOutfit: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,7 +27,11 @@ class OutfitTableViewCell: UITableViewCell {
     //var titolo : String = ""
     //var outfitImage : UIImage =
     
+    @IBOutlet weak var profilo: UIImageView!
     
+    @IBAction func click(_ sender: Any) {
+    
+    }
     
     
 }
